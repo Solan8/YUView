@@ -52,8 +52,8 @@ Compiling YUView from source is easy! We use qmake for the project so on all sup
 ```
 
 3. configure the path of libde265.so for analyzing H.265 Annex B stream
-In YUView, H.265 bit stream is decoded with libde265.
-To avoid segment fault, we'd better do some manual settings.
+
+    In YUView, H.265 bit stream is decoded with libde265. To avoid segment fault, we'd better do some manual settings.
 
  * At first, find the path of libde265.so. For example,
 
