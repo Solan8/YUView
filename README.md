@@ -43,12 +43,13 @@ Compiling YUView from source is easy! We use qmake for the project so on all sup
     sudo apt install qt5-qmake qt5-default libqt5opengl5-dev libde265-0 libde265-dev
 ```
 
-2. build source code
+2. build and install YUView
 
 
 ```
     qmake
     make
+    sudo make install
 ```
 
 3. configure the path of libde265.so for analyzing H.265 Annex B stream
