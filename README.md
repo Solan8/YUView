@@ -55,7 +55,7 @@ Compiling YUView from source is easy! We use qmake for the project so on all sup
 In YUView, H.265 bit stream is decoded with libde265.
 To avoid segment fault, we'd better do some manual settings.
 
-    At first, find the path of libde265.so. For example,
+ * At first, find the path of libde265.so. For example,
 
 ```
     $find /usr/ -name "*libde265.so*"
@@ -64,7 +64,8 @@ To avoid segment fault, we'd better do some manual settings.
     /usr/lib/x86_64-linux-gnu/libde265.so.0.0.10
 ```
 
-    Then in the YUView settings(File -> Settings -> Decoders), set the manual path(/usr/lib/x86_64-linux-gnu/libde265.so) for libde265, and set Default Decoder to "libDe265"
+
+ * Then in the YUView settings(File -> Settings -> Decoders), set the manual path(/usr/lib/x86_64-linux-gnu/libde265.so) for libde265, and set Default Decoder to "libDe265"
 
 
 ## Download
