@@ -30,6 +30,43 @@ Screenshot of YUView:
 
 ![YUView Main Window](https://raw.githubusercontent.com/IENT/YUView/gh-pages/images/Overview.png)
 
+## Building
+
+Compiling YUView from source is easy! We use qmake for the project so on all supported platforms you just have to install qt and run `qmake` and `make` to build YUView. Alternatively, you can use the QTCreator if you prefer a GUI.
+
+ More help on building YUView can be found in the [wiki](https://github.com/IENT/YUView/wiki/Compile-YUView).
+
+### Building under Ubuntu 16.04
+1. Install qt5 and libde265
+
+```
+    sudo apt install qt5-qmake qt5-default libde265-0 libde265-dev
+```
+
+2. build source code
+
+
+```
+    qmake
+    make
+```
+
+3. configure the path of libde265.so for analyzing H.265 Annex B stream
+In YUView, H.265 bit stream is decoded with libde265.
+To avoid segment fault, we'd better do some manual settings.
+
+    At first, find the path of libde265.so. For example,
+
+```
+    $find /usr/ -name "*libde265.so*"
+    /usr/lib/x86_64-linux-gnu/libde265.so.0
+    /usr/lib/x86_64-linux-gnu/libde265.so
+    /usr/lib/x86_64-linux-gnu/libde265.so.0.0.10
+```
+
+    Then in the YUView settings(File -> Settings -> Decoders), set the manual path(/usr/lib/x86_64-linux-gnu/libde265.so) for libde265, and set Default Decoder to "libDe265"
+
+
 ## Download
 
 You can download precompiled binaries for Windows and MAC from our [release site](https://github.com/IENT/YUView/releases) or here:
@@ -42,6 +79,3 @@ For the Linux based platforms we are on [flathub](https://flathub.org/apps/detai
 
 If none of these apply to you, you can easily [build YUView yourself](https://github.com/IENT/YUView/wiki/Compile-YUView).
 
-## Building
-
-Compiling YUView from source is easy! We use qmake for the project so on all supported platforms you just have to install qt and run `qmake` and `make` to build YUView. Alternatively, you can use the QTCreator if you prefer a GUI. More help on building YUView can be found in the [wiki](https://github.com/IENT/YUView/wiki/Compile-YUView).
