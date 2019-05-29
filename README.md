@@ -40,7 +40,7 @@ Compiling YUView from source is easy! We use qmake for the project so on all sup
 1. Install qt5 and libde265
 
 ```
-    sudo apt install qt5-qmake qt5-default libde265-0 libde265-dev
+    sudo apt install qt5-qmake qt5-default libqt5opengl5-dev libde265-0 libde265-dev
 ```
 
 2. build source code
